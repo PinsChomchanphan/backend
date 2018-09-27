@@ -1,0 +1,69 @@
+<!-- Left Sidebar -->
+<div class="left main-sidebar">
+
+    <div class="sidebar-inner leftscroll">
+
+        <div id="sidebar-menu">
+
+            <ul>
+
+                <li class="submenu">
+                    <a href="javascript:void(0);" (click)="onClickMenu($event)" [routerLink]="['/']" routerLinkActive="active"
+                        [routerLinkActiveOptions]="{exact:true}">
+                        <i class="fa fa-fw fa-home"></i><span> Dashboard </span>
+                    </a>
+                </li>
+
+                <li class="submenu">
+                    <a href="javascript:void(0);" (click)="onClickMenu($event)" [routerLink]="['/test']" routerLinkActive="active"><i
+                            class="fa fa-fw fa-area-chart"></i><span>
+                            Charts </span> </a>
+                </li>
+
+                <li class="submenu">
+                    <a href="javascript:void(0);" (click)="onClickMenu($event)" 
+                    [class.active]="router.isActive('/test1')">
+                        <i class="fa fa-fw fa-table"></i>
+                        <span> Tables </span>
+                        <span class="menu-arrow"></span>
+                    </a>
+                    <ul class="list-unstyled">
+                        <li routerLinkActive="active">
+                            <a href (click)="false" [routerLink]="['/test1']">Basic
+                                Tables</a></li>
+                    </ul>
+                </li>
+
+                <li class="submenu">
+                        <a href="javascript:void(0);" (click)="onClickMenu($event)" 
+                        [class.active]="router.isActive('/test3') || router.isActive('/test3')">
+                            <i class="fa fa-fw fa-home"></i>
+                            <span> 33 </span>
+                            <span class="menu-arrow"></span>
+                        </a>
+                        <ul class="list-unstyled">
+                            <li routerLinkActive="active"><a href (click)="false" [routerLink]="['/test3']">Data
+                                    Tables</a></li>
+                        </ul>
+                    </li>
+
+
+
+
+
+
+
+
+
+            </ul>
+
+            <div class="clearfix"></div>
+
+        </div>
+
+        <div class="clearfix"></div>
+
+    </div>
+
+</div>
+<!-- End Sidebar -->

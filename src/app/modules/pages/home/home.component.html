@@ -1,0 +1,27 @@
+<div class="adminbody">
+
+    <div id="main">
+
+        <app-header></app-header>
+        <app-sidebar-menu></app-sidebar-menu>
+        <div class="content-page">
+
+            <!-- Start content -->
+            <div class="content">
+                <div class="container-fluid">
+                    <app-breadcrumb></app-breadcrumb>
+                    <!-- end row -->
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <router-outlet></router-outlet>
+                        </div>
+                    </div>
+                </div>
+                <!-- END container-fluid -->
+            </div>
+            <!-- END content -->
+        </div>
+        <!-- END content-page -->
+        <app-footer></app-footer>
+    </div>
+</div>
