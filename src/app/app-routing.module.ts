@@ -13,32 +13,51 @@ const routes: Routes = [
     {
         path: '',
         component: HomeComponent,
+        // data: {
+        //     breadcrumb: 'forms'
+        // },
         children: [
             {
                 path: '',
-                component: TestComponent
+                component: TestComponent,
+                data: {
+                    breadcrumb: 'details'
+                },
             },
             {
                 path: 'test',
-                component: TestComponent
+                component: TestComponent,
+                data: {
+                    breadcrumb: 'test'
+                }
             },
             {
                 path: 'test1',
-                component: Test1Component
+                component: Test1Component,
+                data: {
+                    breadcrumb: 'test1'
+                }
             },
             {
                 path: 'profile',
-                component: ProfileComponent
+                component: ProfileComponent,
+                data: {
+                    breadcrumb: 'profile'
+                }
             },
             {
                 path: 'test3',
-                component: Test3Component
+                component: Test3Component,
+                data: {
+                    breadcrumb: 'test3'
+                }
             }
         ]
     },
     {
         path: 'login',
         component: LoginComponent
+
     },
     {
         path: 'forgot-password',

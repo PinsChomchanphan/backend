@@ -10,7 +10,8 @@ import { AppRoutingModule } from '../../app-routing.module';
 @NgModule({
     imports: [
         BsDropdownModule.forRoot(),
-        AppRoutingModule
+        AppRoutingModule,
+        CommonModule
     ],
     declarations: [
         FooterComponent,

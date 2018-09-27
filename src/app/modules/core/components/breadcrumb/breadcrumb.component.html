@@ -1,10 +1,16 @@
 <div class="row">
     <div class="col-xl-12">
         <div class="breadcrumb-holder">
-            <h1 class="main-title float-left">Blank Page</h1>
+            <h1 class="main-title float-left">{{name}}</h1>
             <ol class="breadcrumb float-right">
-                <li class="breadcrumb-item">Home</li>
-                <li class="breadcrumb-item active">Blank Page</li>
+                <li class="breadcrumb-item">
+                    
+                    <a [routerLink]="['/']">Home</a>
+                </li>
+                <li *ngFor="let breadcrumb of breadcrumbs" class="breadcrumb-item" [class.active]="'/'+breadcrumb.url == router.url">
+                    <span *ngIf="'/'+breadcrumb.url == router.url">{{ breadcrumb.label }}</span>
+                    <a *ngIf="'/'+breadcrumb.url != router.url" [routerLink]="[breadcrumb.url, breadcrumb.params]">{{ breadcrumb.label }}</a>
+                </li>
             </ol>
             <div class="clearfix"></div>
         </div>
