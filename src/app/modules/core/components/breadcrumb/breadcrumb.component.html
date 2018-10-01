@@ -4,7 +4,6 @@
             <h1 class="main-title float-left">{{name}}</h1>
             <ol class="breadcrumb float-right">
                 <li class="breadcrumb-item">
-                    
                     <a [routerLink]="['/']">Home</a>
                 </li>
                 <li *ngFor="let breadcrumb of breadcrumbs" class="breadcrumb-item" [class.active]="'/'+breadcrumb.url == router.url">
