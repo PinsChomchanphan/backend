@@ -1,6 +1,7 @@
 import { OnDestroy } from '@angular/core';
 import { SubscribeModel } from '../../../modals/subscribes/subscribe.model';
 import { AppUserModel } from '../../../modals/users/app-user.model';
+import { UserService } from '../services/user.service';
 
 
 export class BaseComponent implements OnDestroy {

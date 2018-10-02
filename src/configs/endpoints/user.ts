@@ -1,4 +1,4 @@
-export const enum User {
+export const enum EndPointUser {
     CreateTenants = 'tenant/command/create',
     CreateUser = 'user/command/create',
     GetAllTenants = 'tenant/query/tenants',
